@@ -1,4 +1,4 @@
-require('dotenv').config()
+// require('dotenv').config()
 
 
 const express = require('express')
@@ -16,4 +16,4 @@ const subscribersRouter=require('./routes/subscribers')
 app.use('/subcribers' ,subscribersRouter)
 
 
-app.listen(3000,() => console.log('Server Started'))
+app.listen(process.env.PORT || 3000,() => console.log('Server Started'))
